@@ -1,0 +1,83 @@
+cutting,,squares,,volume:XXXYYY
+cutting out,,square from each of the four corners:XXXYYY
+enclose,,rectangular,,area:XXXYYY
+enclose,,area,,fenc:XXXYYY
+fence,,rectangular:cost,,XXXYYY
+rectangular,,plot:semilog:XXXYYY
+rectangular enclosure:cost,,XXXYYY
+rectangular,,pen,,area,,fenc:XXXYYY
+particle,,velocity:angular,,XXXYYY
+find the average value,,of the function,,on the given interval:XXXYYY
+test the series below for convergence using the ratio test:XXXYYY
+second,,derivative test:concav,,XXXYYY
+first derivative test:concav,,XXXYYY
+increasing,,interval:concav,,intercepts,,XXXYYY
+determine where,,increasing:concav,,intercepts,,XXXYYY
+concave,,intervals:increasing,,decreasing,,max,, min,,extrem,,XXXYYY
+critical points,,extrem:concav,,intercepts,,XXXYYY
+rolle,,theorem:XXXYYY
+mean value theorem:XXXYYY
+extreme value theorem:XXXYYY
+intermediate value theorem:complex,,XXXYYY
+use the sign diagram for f'(x) to determine:XXXYYY
+match the graph of f with the correct sign chart:XXXYYY
+classify the discontinuit:XXXYYY
+ratio test:comparison,,absolute,,XXXYYY
+root test:XXXYYY
+geometric series:XXXYYY
+alternating series test:XXXYYY
+determine the intervals on which f is increasing:concav,,XXXYYY
+properties,,definite integral:lim,,XXXYYY
+use the given graph of the function f to answer the following questions. if a question has two or more answers separate them with commas_ 1. list the open interval(s) on which f is concave upward:XXXYYY
+the graph of a function is given,,derivative:XXXYYY
+start with the graph of,,then make which of the following changes:XXXYYY
+choose the correct definite integral that corresponds to the shaded:XXXYYY
+fundamental theorem of calculus:XXXYYY
+interpreting,,terms of areas,,integral:XXXYYY
+the given graph of the derivative f' of a function f is shown:XXXYYY
+use the graph of f,,inc:XXXYYY
+graph,,shown,,lim:XXXYYY
+graphed,,lim:XXXYYY
+use the graph of f,,given figure,,lim:xxxyyy
+use the graph,, following limits:XXXYYY
+use the given graph of the function,,limit:XXXYYY
+use the given graph of f,,lim:XXXYYY
+be the function below,,lim:XXXYYY
+graph of the derivative,,figure:XXXYYY
+graphed below,,area of the shaded region:XXXYYY
+consider the following graph,,max:XXXYYY
+find two positive numbers satisfying the given:XXXYYY
+numbers x and y,,satisfy:XXXYYY
+average rate of change,,over,,interval:XXXYYY
+radius of convergence:XXXYYY
+evaluate the limit:definition,,series,,area,,XXXYYY
+average value,,interval,,function:XXXYYY
+A single card is drawn from a standard 52-card deck:XXXYYY
+state whether the functions represented by graphs,,even,,odd:XXXYYY
+in each part state the x-coordinates of the inflection points,,the curve is:XXXYYY
+determine the points at which the function,,discontinuities:XXXYYY
+vertical asymptotes:XXXYYY
+choose,,so that,,continuous on any interval:XXXYYY
+for what value of,,is the function,,continuous:xxxyyy
+use the given graph of the function to find the,,values,,differentiable:xxxyyy
+equation of the tangent line to the graph,,at the point:xxxyyy
+The population of a city is,,how long does it take for the population to:XXXYYY
+indicate whether the graph specifies,,function:XXXYYY
+find the constant,,such that the function is continuous:XXXYYY
+which functions have graphs with a horizontal asymptote:XXXYYY
+find the limit:XXXYYY
+determine the,,limit of the function:XXXYYY
+open-top box is to be constructed from,,folding up the sides:XXXYYY
+he functions f and g are graphed below:XXXYYY
+Find the equation of the tangent line to the curve:XXXYYY
+Find the exact location of all the relative and absolute extrema of the function:XXXYYY
+Find all points where,,fails to be differentiable:XXXYYY
+sign chart,,graphed below:XXXYYY
+Hospital's Rule:XXXYYY
+Venn diagram:XXXYYY
+tangent:XXXYYY
+ lim:XXXYYY
+derivative:XXXYYY
+linearization:XXXYYY
+continuous:XXXYYY
+not differentiable:XXXYYY

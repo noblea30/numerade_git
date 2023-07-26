@@ -1,0 +1,62 @@
+Find the distance d that the runner jogs as a function of the time spent jogging t. Find the inverse function by expressing the time spent jogging t in terms of the distance jogge:XXXYYY
+For the following function whose graph is shown, choose the graph below that corresponds to its derivative:XXXYY
+Given the graph of y = f(x) below, at which of the marked x-values can the following statements be true?:XXXYYY
+The figure the right shows the graph of = function over the closed interval,,At what domain points does the function appear lo be differentiable?:XXXYYY
+Sketch the graph of a single function that has all of the properties listed:XXXYYY
+Use the following information to graph the function f over the closed interval:XXXYYY
+Let f be the function below,,Indicate where,,is differentiable:XXXYYY
+Refer to the figure below which contains the graph of f'(x) . the derivative of the function:XXXYYY
+Let f be a function defined for all x,and continuous at all values of x except at,,Does there always exist a value on the interval:XXXYYY
+Suppose that fashion company determines that the cost, in dollars of producing cellphone cases given:XXXYYY
+For the lim,,illustrate the definition by finding the largest,,possible,,values of,,that correspond:XXXYYY
+An integer between 5 and 12 inclusive is chosen. What is the probability that it is even:XXXYYY
+The figures below show the position versus time curves of four different particles moving on straight line. For each graph determine whether its instantanequs yelocitx increasing or decreasing with time:XXXYYY
+ketch the graph of a function f that is continuous on,,ketch the graph of a function f that is continuous on:XXXYYY
+Use the graph of,,below to answer the following questions:XXXYYY
+The graph of function,,is shown below with,,labeled points:XXXYYY
+An animal population is given by,, where t is the number of years,, interpret your result:XXXYYY
+the graph Ol,, given below,,at which of the marked values of,,f',,greatest:XXXYYY
+use limits,,describe the asymptotic behavior of the function from its graph:XXXYYY
+Look at the graph of the function below. Find the indicated and function values,,lim:XXXYYY
+The graph of function g is given,,State the values of the following:XXXYYY
+Describe the x-values at which f is differentiable:XXXYYY
+If total costs are,,total revenues are,,find the break-even points:XXXYYY
+at what points on the given curve,, does the tangent line have slope:XXXYYY
+find the indicated limit:XXXYYY
+Identify the graphs,,as the graphs f a function and its derivatives:XXXYYY
+Use the figure below to estimate the indicated derivative:XXXYYY
+The table above gives the values of the differentiable functions and and their derivatives:XXXYYY
+Determine if the given function is continuous at the indicated number:XXXYYY
+table below shows various values for f(x) and g(x) as well as their derivatives:XXXYYY
+For what value,,will the function,, have a tangent line whose slope is:XXXYYY
+The figure to the rght shows the graph of function. Match the function with its first derivative and its second derivative:XXXYYY
+Match the graphs a-d of functions with graphs A-C of their derivatives:XXXYYY
+Determine the interval(s) for which the function shown below is:XXXYYY
+Let f be the function in the graph below,,Express in interval notation where f is differentiable:XXXYYY
+Let f and g be the functions whose graphs are shown below:XXXYYY
+Graph f locate all points of discontinuity:XXXYYY
+Use the figures below to evaluate the indicated derivative:XXXYYY
+Use the graph of y = f(x) to identify at which of the indicated points f'(x) changes from positive to negative:XXXYYY
+Use the graph below to find exact values of the indicated derivatives:XXXYYY
+determine whether is continuous from the right:XXXYYY
+Is f(c) = lim f(x) always true:XXXYYY
+The graph of the derivative function f' of a function f that is continuous for all real numbers is given:XXXYYY
+Determine where the function is not differentiable:XXXYYY
+Determine whether or not each of the following relations are functions:XXXYYY
+The graphs of the function f (given in blue) and g (given in red) are plotted:XXXYYY
+has degree,,a root of multiplicity,,Find an equation of:XXXYYY
+If possible, define the function at,, so that it becomes continuous:XXXYYY
+carpenter is building rectangular shed,,largest shed that can be built:XXXYYY
+he functions f and g are graphed below:XXXYYY
+Based on the graph of f(r) in the figure,, determine where,,f'(r):XXXYYY
+Determine the coordinates of the hole(s) in the function below:XXXYYY
+Select the correct graph of the derivative of the function:XXXYYY
+Find the equation of the tangent line:XXXYYY
+etermine the average rate of change:XXXYYY
+Find a and b so that the function is both continuous and differentiable:XXXYYY
+feet of fencing to enclose a rectangular region:XXXYYY
+area under the curve:XXXYYY
+improper integral:XXXYYY
+bug:XXXYYY
+implicit differentiation:XXXYYY
+volume,,solid:XXXYYY
