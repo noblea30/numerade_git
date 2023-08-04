@@ -117,7 +117,7 @@ def sanitize_text(text):
 
 #twilio details.
 account_sid = "ACa853e4da90638c9d1babcd106b8a7039"
-auth_token = "ddb0e950f52434dafcad0f024bb321ff"
+auth_token = "5f8e45e10835cf9c46ed9cf9b60eeb99"
 client = Client(account_sid, auth_token)
 
 
@@ -332,7 +332,7 @@ def get_want_list():
     get_avoid_list()
     get_direct_want_list()
     want = []
-    with open("do_these") as f:
+    with open("do_these.txt") as f:
         lines = f.readlines()
     for l in lines:
         l=l.strip()
@@ -348,7 +348,7 @@ def get_want_list():
 def get_avoid_list():
     global avoid
     avoid = []
-    with open("avoid") as f:
+    with open("avoid.txt") as f:
         lines = f.readlines()
     for l in lines:
         l = l.strip()
@@ -357,6 +357,7 @@ def get_avoid_list():
 #student_questions = "https://www.numerade.com/educator/dashboard/student-questions"
 student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true" #calculus questions only
 student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true&questionType=ask&chapterIds=4"
+student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true&questionType=ask&chapterIds=4&question-type=ask&chapter-ids=4"
 #student_questions = "https://www.numerade.com/educator/dashboard?chapterId=1&questionStudentDisplay=true&chapterId=4" #both calc and algebra
 #student_questions =  "https://www.numerade.com/educator/dashboard?chapterId=13&questionStudentDisplay=true&chapterId=1"  #algebra only
 
@@ -460,6 +461,7 @@ def open_browser(url, cl_name):
     # WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.NAME, 'password'))).send_keys(f'{password}\n')
     # time.sleep(5)
     # url = "https://www.numerade.com/ask/educators/"
+
     script = '''window.open("''' + url + '''");'''
     driver.execute_script(script)
     # time.sleep(15) #can reduce to 1?
@@ -573,7 +575,9 @@ def watch_for_questions(driver,previous_videos):
                 #text_thread = threading.Thread(target=text_me, args=("Hello from Twilio",))
                 #text_thread.start()
                 call_text_me("full")
-                taken = add_questions(driver, get_full=True)
+                taken = add_questions(driver, get_full=True)  #run it three times.  I can stop manually if needed
+                taken += add_questions(driver, get_full=True)
+                taken += add_questions(driver, get_full=True)
                 if taken < 0:   #this should be 5 for a full run, changing to trickle only now.
                     print("didn't take enough.  go again I guess?")
                     scroll_up(driver)
@@ -1496,7 +1500,7 @@ def add_questions(driver,get_full = True, take_videos = True):
             print("this page chose : ", num)
             t2 = time.time()
             print("it took", t2-t1, "for ", total_videos, "videos")
-            num = check_num_questions(driver)
+    num = check_num_questions(driver)
     print("all passes done: ", total_videos, "debug:", debug_num)
     return total_videos
 
