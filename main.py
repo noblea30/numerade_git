@@ -117,7 +117,7 @@ def sanitize_text(text):
 
 #twilio details.
 account_sid = "ACa853e4da90638c9d1babcd106b8a7039"
-auth_token = "5f8e45e10835cf9c46ed9cf9b60eeb99"
+auth_token = "1ac15527bbbcee261e8d9ae4a312d48a"
 client = Client(account_sid, auth_token)
 
 
@@ -354,12 +354,8 @@ def get_avoid_list():
         l = l.strip()
         avoid.append(l.lower())
 #get the number of questions that are avaialable for calculus
-#student_questions = "https://www.numerade.com/educator/dashboard/student-questions"
-student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true" #calculus questions only
-student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true&questionType=ask&chapterIds=4"
-student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true&questionType=ask&chapterIds=4&question-type=ask&chapter-ids=4"
-#student_questions = "https://www.numerade.com/educator/dashboard?chapterId=1&questionStudentDisplay=true&chapterId=4" #both calc and algebra
-#student_questions =  "https://www.numerade.com/educator/dashboard?chapterId=13&questionStudentDisplay=true&chapterId=1"  #algebra only
+student_questions = "https://www.numerade.com/educator/dashboard?chapterId=4&questionStudentDisplay=true&questionType=ask&chapterIds=4&question-type=ask&chapter-ids=4" #calculus
+#student_questions = "https://www.numerade.com/educator/dashboard?question-type=ask&chapter-ids=1" #algebra
 
 def check_num_questions(driver):
     try:
@@ -450,7 +446,7 @@ def open_browser(url, cl_name):
     profile = "C:/Users/Public/Public Documents/Chrome_details/Default"
     executable_path = "C:/Users/Public/Public Documents/Chrome_details/chromedriver_7.exe"
     # if it stops working, need to open browser under any profile and click on "About Chrome" in settings.  This will start the update.  WHen done , just click "relaunch" and it should work now.
-
+    print("H1")
     options.user_data_dir = profile
     options2 = uc.ChromeOptions()
     options2.user_data_dir = profile
@@ -461,9 +457,10 @@ def open_browser(url, cl_name):
     # WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.NAME, 'password'))).send_keys(f'{password}\n')
     # time.sleep(5)
     # url = "https://www.numerade.com/ask/educators/"
-
+    print("H2")
     script = '''window.open("''' + url + '''");'''
     driver.execute_script(script)
+    print("H3")
     # time.sleep(15) #can reduce to 1?
     driver.switch_to.window(driver.window_handles[1])
     print("waiting")
@@ -576,6 +573,8 @@ def watch_for_questions(driver,previous_videos):
                 #text_thread.start()
                 call_text_me("full")
                 taken = add_questions(driver, get_full=True)  #run it three times.  I can stop manually if needed
+                write_list_to_file("ai.txt", took_ai)  #this will be overridden if I let it finish.
+                write_list_to_file("old.txt", took_old)
                 taken += add_questions(driver, get_full=True)
                 taken += add_questions(driver, get_full=True)
                 if taken < 0:   #this should be 5 for a full run, changing to trickle only now.
@@ -586,7 +585,9 @@ def watch_for_questions(driver,previous_videos):
                 #text_thread.join()
                 previous_videos = videos - taken
                 total_mass_taken += taken
-                print("How many of each.  old, ai   :   ", len(took_ai), len(took_old))
+                print("How many of each.  old, ai   :   ", len(took_old), len(took_ai))
+                write_list_to_file("ai.txt", took_ai)
+                write_list_to_file("old.txt", took_old)
                 while 1:
                     pass  #for now, just wait for it to go....will change it later.
             elif videos > previous_videos:  #do full trickle.
@@ -1195,6 +1196,20 @@ def want_from_keywords(want,t):
 took_old = []
 took_ai = []
 
+
+def write_list_to_file(filename, data_list):
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:
+            for item in data_list:
+                try:
+                    file.write(str(item) + '\n')
+                except Exception as e:
+                    print(f"Skipping entry: {item} due to encoding error.")
+        print(f"Data written to '{filename}' successfully.")
+    except Exception as e:
+        print(f"Error writing to '{filename}': {e}")
+
+
 def want_this_video(e,want, full_get = False,take_videos=0, list_lock = None):
     global videos_checked, total_videos_trickled, new_videos, debug_num
     max_text_length = 164
@@ -1257,10 +1272,11 @@ def want_this_video(e,want, full_get = False,take_videos=0, list_lock = None):
         print("haha, not taking videos at all...")
         return False
     take_it = False
-    if want_from_keywords(want,t):
-        take_it = True
     if want_from_ai(t):
         take_it = True
+    elif want_from_keywords(want,t):
+        #take_it = True
+        pass  #turing off old method.
     if take_it:
         return True
     # if want_from_keywords(want,t) or want_from_ai(t):
@@ -1579,8 +1595,20 @@ def debug_single_question():
             time.sleep(10)
 
 
-
+def get_num_assigned(driver):
+    e = driver.find_element(By.CLASS_NAME,"bg-tangerine2-500")
+    try:
+        num = int(e.text.split("(")[1].split(")")[0])
+        print("taken:", num)
+    except:
+        print("can't get num taken:", e.text)
+        while 1:
+            pass
+    return num
 def open_more_videos(driver, lock):
+    if get_num_assigned(driver) >= 99:
+        print("all done, 99 checked out!!!!")
+        return False
     with lock:
         for i in range(10):
             try:
@@ -1645,6 +1673,7 @@ print('here now')
 #restart_and_login(driver)
 #add_questions(driver,take_videos=False)
 num = check_num_questions(driver)
+get_num_assigned(driver)
 print(num)
 watch_for_questions(driver, num)  #text and gather questions when they become available.
 

@@ -60,7 +60,7 @@ all_data = take_data + skip_data
 labels = ['take'] * len(take_data) + ['skip'] * len(skip_data)
 all_data = [sanitize_text(x) for x in all_data]
 # Step 3: Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(all_data, labels, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(all_data, labels, test_size=0.01, random_state=42)  #test_size was .2 and it worked.  changed to .01 to allow more training.
 #print("xtrain",X_train)
 #print("xtest",X_test)
 #print("ytrain",y_train)
@@ -71,7 +71,7 @@ X_train_vectorized = vectorizer.fit_transform(X_train)
 X_test_vectorized = vectorizer.transform(X_test)
 
 # Step 5: Train the model
-model = LogisticRegression()
+model = LogisticRegression(max_iter=100)
 model.fit(X_train_vectorized, y_train)
 
 # Step 6: Evaluate the model

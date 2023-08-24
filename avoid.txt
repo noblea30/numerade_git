@@ -20,3 +20,10 @@ GRAPHS CAN't COPY
 proof
 cone
 sphere
+double integration
+spherical coordinates
+Riemann
+spherical coordinates
+triple integral
+Midpoint Rule
+spherical coordinates
