@@ -117,7 +117,7 @@ def sanitize_text(text):
 
 #twilio details.
 account_sid = "ACa853e4da90638c9d1babcd106b8a7039"
-auth_token = "1ac15527bbbcee261e8d9ae4a312d48a"
+auth_token = "6d99a994cc65633b1f3d93d482038c77"
 client = Client(account_sid, auth_token)
 
 
